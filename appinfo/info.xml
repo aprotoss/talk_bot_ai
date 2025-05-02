@@ -11,7 +11,7 @@ The bot is capable of answering questions in chat depending on the model set by 
 
 **The [`AppAPI`](https://github.com/nextcloud/app_api) application needs to be enabled to install and use this bot.**
 	]]></description>
-	<version>3.0.3</version>
+	<version>3.0.4</version>
 	<licence>MIT</licence>
 	<author mail="jacky.chang@jetone.com.tw">Jacky Chang</author>
 	<namespace>AssistantTalkBot</namespace>
@@ -28,7 +28,7 @@ The bot is capable of answering questions in chat depending on the model set by 
 		<docker-install>
 			<registry>ghcr.io</registry>
 			<image>aprotoss/talk_bot_ai</image>
-			<image-tag>3.0.3</image-tag>
+			<image-tag>3.0.4</image-tag>
 		</docker-install>
 	</external-app>
 </info>
