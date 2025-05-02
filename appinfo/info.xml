@@ -30,5 +30,14 @@ The bot is capable of answering questions in chat depending on the model set by 
 			<image>aprotoss/talk_bot_ai</image>
 			<image-tag>3.0.4</image-tag>
 		</docker-install>
+    <environment-variables>
+		  <variable>
+		  	<name>APP_HOST</name>
+		  	<display-name>Application Host</display-name>
+		  	<description>Set the public address of this application so Nextcloud can reach its heartbeat endpoint</description>
+		  	<default>cloud.jetone.com.tw</default>
+		  </variable>
+      
+    </environment-variables>
 	</external-app>
 </info>
