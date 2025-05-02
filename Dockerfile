@@ -29,6 +29,8 @@ ADD /src/ /app/
 RUN \
   python3 -m pip install -r requirements.txt && rm -rf ~/.cache && rm requirements.txt
 
+ENV APP_HOST=cloud.jetone.com.tw
+
 WORKDIR /app
 ENTRYPOINT ["/start.sh", "python3", "main.py"]
 HEALTHCHECK --interval=5s --timeout=2s --retries=300 CMD /healthcheck.sh

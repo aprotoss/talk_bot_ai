@@ -29,7 +29,7 @@ help:
 .PHONY: build-push
 build-push:
 	docker login ghcr.io
-	docker buildx create --name $(APP_ID) --driver docker-container --platform linux/amd64,linux/arm64 --use || true
+	docker buildx create --name $(APP_ID) --driver docker-container --platform linux/amd64 --use || true
 	docker buildx build --push --platform linux/amd64 --tag ghcr.io/aprotoss/$(APP_ID):$(APP_VERSION) --tag ghcr.io/aprotoss/$(APP_ID):latest .
 
 .PHONY: run
