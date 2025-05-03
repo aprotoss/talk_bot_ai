@@ -4,6 +4,7 @@ import asyncio
 from contextlib import asynccontextmanager
 import json
 import re
+import uvicorn
 from typing import Annotated
 
 from fastapi import BackgroundTasks, Depends, FastAPI, Query, Request, responses
@@ -94,4 +95,6 @@ def enabled_handler(enabled: bool, nc: NextcloudApp):
 
 
 if __name__ == "__main__":
-    run_app("main:APP", log_level="trace")
+    uvicorn.run("main:APP", host="0.0.0.0", port=23000, log_level="trace")
+    #run_app("main:APP", log_level="trace", host="0.0.0.0")
+    
